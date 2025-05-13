@@ -1,0 +1,483 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+
+  .playwrite-dk-loopet {
+    font-family: "Playwrite DK Loopet", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+  /* Estilos Globais */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 200px;
+  }
+  
+
+
+
+
+
+
+
+
+  /* Títulos utilizando Poppins */
+  h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+
+
+
+
+
+
+
+  
+  /* Cabeçalho */
+  header {
+    background: #f8c8dc;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: center;
+  }
+  
+  header > nav > ul > li a:hover {
+    color: #fff0f5;
+  }
+  
+  header > h1 {
+    font-size: 2.5rem;
+    color: #702963;
+  }
+  
+
+
+
+
+
+
+  /* Navegação */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #702963;
+    font-weight: bold;
+  }
+  
+
+
+
+
+
+
+
+
+
+  /* Seções */
+  section {
+    padding: 40px 20px;
+  }
+  
+  section p {
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Banner (exemplo de banner tradicional e banner-trio) */
+  .banner {
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  .banner-trio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff0f5;
+    flex-wrap: wrap;
+  }
+  
+  .banner-esquerda img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  .banner-direita {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .banner-direita img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+
+
+
+  
+  /* Animação para imagens do banner */
+  .banner-img {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  .banner-direita img:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .banner-direita img:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+  /* Seção Sobre */
+  #sobre {
+    font-size: 1.1rem;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Galeria de Imagens com scroll horizontal */
+  .galeria {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+  }
+
+  #row{
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    flex-direction: row-reverse;
+  }
+  
+  .galeria img {
+    flex: 0 0 auto;
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.05);
+  }
+  
+  .galeria::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .galeria::-webkit-scrollbar-thumb {
+    background-color: #d48bb6;
+    border-radius: 4px;
+  }
+  
+  .galeria::-webkit-scrollbar-track {
+    background-color: #f3e0ea;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /* Tabela de Serviços */
+  .tabela-servicos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabela-servicos th,
+  .tabela-servicos td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .tabela-servicos th {
+    background-color: #702963;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .tabela-servicos tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tabela-servicos tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .tabela-servicos td {
+    color: #333;
+  }
+  
+  .tabela-servicos td:last-child {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: disc inside;
+    margin-top: 10px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-top: 10px;
+  }
+  
+  cite {
+    display: block;
+    margin-top: 5px;
+    color: #777;
+  }
+  
+
+
+
+
+
+
+
+  /* Botões para WhatsApp e Instagram */
+  .btn-whatsapp,
+  .btn-instagram {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-top: 20px;
+    background-color: #25d366;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+  }
+  
+  .btn-instagram {
+    background-color: #e1306c;
+  }
+  
+  .btn-whatsapp:hover,
+  .btn-instagram:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #1ebc5c;
+  }
+  
+  .btn-instagram:hover {
+    background-color: #c1275b;
+  }
+  
+  /* Mapa */
+  .mapa-container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  /* Rodapé */
+  footer {
+    background: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 32px;
+    text-decoration: none;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ---------------------------------------------------------------------------
+     MEDIA QUERIES PARA RESPONSIVIDADE
+  --------------------------------------------------------------------------- */
+  
+  @media (min-width: 1400px) {
+    body {
+      margin: 0 250px;
+    }
+  }
+  
+
+  @media (max-width: 1400px) and (min-width: 1200px) {
+    body {
+      margin: 0 150px;
+    }
+  }
+  
+  
+  @media (max-width: 1200px) and (min-width: 768px) {
+    body {
+      margin: 0 80px;
+      font-size: 1.1rem;  
+    }
+    .galeria img {
+      width: 200px; 
+    }
+    .sumir{
+        display: none;
+    }
+
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      margin: 0 20px;
+      font-size: 1rem; 
+    }
+    
+    header > h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .galeria {
+      flex-direction: flex;
+      gap: 10px;
+    }
+    
+    .galeria img {
+      width: 150px; 
+    }
+    .sumir{
+        display: none;
+    }
+
+    header>nav{
+        display:none;
+    }
+    
+  }
+  
+
+  
